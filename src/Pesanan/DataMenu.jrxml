@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DodosLaundy" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa810fe6-c5c6-4084-9995-df38f9b2e314">
+	<property name="ireport.zoom" value="1.2418426461183103"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<parameter name="paradodos" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT 
+    dbmenu.id AS Id,
+    dbmenu.menu AS Menu,
+    dbmenu.harga AS Harga_Menu,
+    dbmenu.paket AS Paket,
+    dbmenu.hargap AS Harga_Paket
+FROM
+    dbmenu;
+]]>
+	</queryString>
+	<field name="Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Menu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga_Menu" class="java.lang.Integer"/>
+	<field name="Paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga_Paket" class="java.lang.Integer"/>
+	<variable name="no_faktur_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{no_faktur}]]></variableExpression>
+	</variable>
+	<variable name="total_harga_costumer_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{total_harga_costumer}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="87">
+			<staticText>
+				<reportElement x="72" y="3" width="297" height="50" uuid="fc5244a2-cc32-4eed-a7e4-74fd889a5e04"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="24" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CATERING RESTORAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="5" width="87" height="70" uuid="97ae9412-60cd-493c-82eb-de28c8f19c3f"/>
+				<imageExpression><![CDATA["C:\\Users\\afriz\\netbeans\\laundrydodos\\src\\laundry\\logo.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="85" width="555" height="1" uuid="fd86d4bc-1d96-4279-bcbf-8bb23cc06267"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="76" y="46" width="326" height="20" uuid="9ed281cd-6481-440e-8ddf-208d5ba1a268"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="65" width="168" height="20" uuid="44038797-0ece-4ef4-bcdb-995f76ae508e"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="33" width="189" height="20" forecolor="#66CCFF" uuid="44fce392-57e8-4b52-9726-c645995cb004"/>
+				<textElement>
+					<font fontName="Forte"/>
+				</textElement>
+				<text><![CDATA[MOTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="53" width="186" height="32" forecolor="#66FF66" uuid="1f736e25-0971-4881-be11-18f9c77412c7"/>
+				<textElement textAlignment="Right">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[📞]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="25" forecolor="#003333" backcolor="#CCCCCC" uuid="a4851c7d-c1da-4078-9a96-258a7efc548b"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Makanan Dan Minuman]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="125">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="102" uuid="50424c25-8200-4d84-9657-33960eecf9d6"/>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="100" height="20" uuid="bb6a5f91-fa5b-4e09-919f-07cd94705055"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="82" width="100" height="20" uuid="df6db20d-fbfb-4de6-bb74-8a7ed26fba3d"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="82" width="100" height="20" uuid="197af8e7-6de3-4b46-9bbb-b0f408442605"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="50" width="100" height="20" uuid="c93b7950-b246-4d07-8375-9715b3c584da"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="100" height="102" uuid="6eb98049-473a-49b5-9110-3ca81e22f64b"/>
+			</textField>
+			<textField>
+				<reportElement x="230" y="82" width="100" height="20" uuid="882b669f-7e18-488e-bbca-8329a4204723"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="50" width="100" height="20" uuid="5dd90b93-e798-45b6-91de-7bbd8d4edb97"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="102" uuid="1495ae44-b7a6-45b1-b75c-bd6897238646"/>
+			</textField>
+			<textField>
+				<reportElement x="344" y="82" width="100" height="20" uuid="1d3f6602-444a-4dd0-acf9-8bd6c206b35d"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="50" width="100" height="20" uuid="76f46112-dbd3-4b4c-9859-1f8a82f32890"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="100" height="102" uuid="e02ebdf4-697b-471e-9549-294397f9db8c"/>
+			</textField>
+			<textField>
+				<reportElement x="453" y="82" width="100" height="20" uuid="1bed9cbd-2fc5-4856-a6cd-6cf93527b096"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="50" width="100" height="20" uuid="81127ca8-3433-4ac3-a8ca-5916c7720f5a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="100" height="102" uuid="062fdcb1-d795-4222-9905-158e5866b9c9"/>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="102" uuid="0337cfe3-8233-4dff-ac30-22c6eea8c925"/>
+			</textField>
+			<textField>
+				<reportElement x="0" y="15" width="100" height="20" uuid="1e2255f4-a697-425f-8d8e-98ccfaa6ebd5"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="123" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="82" width="100" height="20" uuid="3c663e55-25d4-4d1e-9eb6-f4aca9b927e8"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="100" height="102" uuid="1fff81ce-6b64-4e76-aa85-05f1850c619a"/>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="100" height="102" uuid="c1269207-2adc-426a-a5e2-71d19303b22a"/>
+			</textField>
+			<textField>
+				<reportElement x="344" y="82" width="100" height="20" uuid="26727606-785c-445d-b3b6-d3089f0d1f07"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="82" width="100" height="20" uuid="49b1c262-42c9-46d3-bcac-d7087b89d1c9"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="50" width="100" height="20" uuid="b22bf38c-9e8c-401c-9901-882a9dfcd324"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="102" uuid="aa837b43-b971-42b6-a6aa-99d3b27255b0"/>
+			</textField>
+			<textField>
+				<reportElement x="113" y="82" width="100" height="20" uuid="49d0b3c9-cbbf-4691-bdb8-3a0a53cf8d62"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="50" width="100" height="20" uuid="eff2827d-dad9-4570-a031-26122f510c32"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="100" height="102" uuid="abc1ee85-11c1-4279-a872-c12a6e5115c0"/>
+			</textField>
+			<textField>
+				<reportElement x="230" y="82" width="100" height="20" uuid="395d5748-85ee-4fb5-9907-1ff73768426e"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="100" height="20" uuid="9a18a7fe-c1d3-46ff-acf9-a85d5a82b7e0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="50" width="100" height="20" uuid="d7bc8e7c-6b62-49b6-9f15-c732b2a32a71"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="102" uuid="623ed76f-8606-446d-b469-f0ef9ba502e3"/>
+			</textField>
+			<textField>
+				<reportElement x="344" y="50" width="100" height="20" uuid="f3a7f39a-f6f0-4ab7-8b7b-f0dbcda9f8b5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nama : Nasi Goreng]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="170">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="25" forecolor="#003333" backcolor="#CCCCCC" uuid="04c73229-8a9c-4c2c-a3a8-57834fde454c"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAKET MENU]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="23" width="100" height="147" uuid="33804395-e816-40bd-bd91-47ae60381b64"/>
+			</textField>
+			<textField>
+				<reportElement x="0" y="23" width="100" height="20" uuid="26908993-db0d-4e07-8ecc-13dfe25ebbb1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[PAKET 1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="54" width="100" height="20" uuid="9ead87c5-996f-4d0f-9752-3b3d235984c0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Menu : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="74" width="100" height="20" uuid="9e3a43b0-64ac-4caf-8f89-dd90f72654d5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="150" width="100" height="20" uuid="4c8a2488-5c13-4a77-9405-68698bfcd307"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="94" width="100" height="20" uuid="252c316c-668b-41d1-8def-7d24fdaf31fe"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="114" width="100" height="20" uuid="0ef89eca-466c-4927-8aa4-f489a228bf97"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="94" width="100" height="20" uuid="c63eb3e9-8266-4d7a-8edd-409c558f26fc"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="74" width="100" height="20" uuid="5b64f331-4723-4f0a-b16e-f87d180af122"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="150" width="100" height="20" uuid="075f124d-ef89-4c91-9931-aa310958a705"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="114" width="100" height="20" uuid="71a41467-7695-4370-92aa-80368f000cab"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="54" width="100" height="20" uuid="98374cdd-1f36-4c42-8c21-f316e44eb431"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Menu : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="23" width="100" height="20" uuid="2b3c2199-aada-4704-928b-9df717a27ebd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[PAKET 1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="23" width="100" height="147" uuid="55209aab-9d93-4952-8ff0-b09673a00ebb"/>
+			</textField>
+			<textField>
+				<reportElement x="290" y="94" width="100" height="20" uuid="48a9fba1-ca71-4531-91ca-46ee9b651c05"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="74" width="100" height="20" uuid="08ac916d-c2c7-4540-95e0-3a4745f607e5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="150" width="100" height="20" uuid="bbc064e5-13b3-4a5b-b425-72219b771c73"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="114" width="100" height="20" uuid="0b8c5132-8574-44ca-ad50-5c74364acfec"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="54" width="100" height="20" uuid="411beac1-63be-43a1-bc65-623a7e727df1"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Menu : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="23" width="100" height="20" uuid="8c25fbfe-7f2b-4e9a-89e6-83d0bc2f846b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[PAKET 1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="23" width="100" height="147" uuid="b32868cd-9cd7-4944-8ac9-a26073c11189"/>
+			</textField>
+			<textField>
+				<reportElement x="432" y="94" width="100" height="20" uuid="1db512da-6e34-445d-a6c1-51f21b1a54e8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="74" width="100" height="20" uuid="1bea5791-63c1-4188-9938-8356567728e2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="150" width="100" height="20" uuid="ba73bb06-4cde-46dc-bb91-eb9a30e77979"/>
+				<textFieldExpression><![CDATA[Harga : Rp.15.000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="114" width="100" height="20" uuid="a6bc6222-f53c-4218-adac-b0ef418710f2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="54" width="100" height="20" uuid="6b4e73d8-656a-4571-8bf0-6a2025ca6397"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Menu : Nasi Goreng]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="23" width="100" height="20" uuid="07d4dc50-8e37-4e33-bd30-bba4189d0add"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[PAKET 1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="23" width="100" height="147" uuid="f4aaad1b-d687-4f1f-a740-23d2aa1eab9e"/>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FullDataGaji" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3252ffc7-de3a-4d94-93f5-75ade1eff550">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM db_gaji_karyawan]]>
+	</queryString>
+	<field name="nama_karyawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_tlp_karyawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin_karyawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat_karyawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="absen_karyawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lembur_karyawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bonus_karyawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_gaji_karyawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="785b2f14-abf3-496a-9581-d39d318e7390"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN GAJI KARYAWAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="466" y="12" width="99" height="20" uuid="d8c7d48b-9794-4fc7-9f1a-68ba4ee6f9ac"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="401" y="12" width="64" height="20" uuid="265841d2-38f4-4dc6-96e1-a3a38e847fb6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="361" y="12" width="40" height="20" uuid="36334ccc-ac56-42e4-97d3-fe78c8972b72"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="321" y="12" width="40" height="20" uuid="01d775f4-9d94-4c81-9afd-6f44cba8dda1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="221" y="12" width="100" height="20" uuid="4905d72a-011f-4f8a-8bf2-4ad72d21681a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="157" y="12" width="64" height="20" uuid="c7689d2a-bafe-4214-9573-b5a262b6d08d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="100" y="12" width="57" height="20" uuid="e03c4bbe-6674-401a-b286-f8f9aba03fed"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="12" width="100" height="20" uuid="0d877163-3b3c-4ee0-9efd-556ff6b5690c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="12" width="100" height="20" uuid="ebbdc3db-c414-4267-8f12-5d904b4a774a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="12" width="57" height="20" uuid="1718954a-2473-4ab4-9a8f-e42c3999fb5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Tlp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="12" width="64" height="20" uuid="d9684c45-7ca0-4cb0-bfde-e8134817d0c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[J. Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="12" width="100" height="20" uuid="19554e41-e3c9-4759-bd71-f86024aacd3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="12" width="40" height="20" uuid="cc9c79f1-3c25-49b5-99da-713d401a920d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Absen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="12" width="40" height="20" uuid="85633b0e-7759-4867-a65d-93df8f3ab703"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lembur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="12" width="100" height="20" uuid="ad77c04d-ccff-4576-b788-eb11c5c2f7da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Gaji]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="12" width="64" height="20" uuid="488bccc4-063b-4d7d-acbc-9c4a8a4dfffb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bonus]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="466" y="0" width="99" height="20" uuid="6297cf24-5918-434e-972b-f44c62e4b716"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="401" y="0" width="64" height="20" uuid="9536b4c5-e6ca-419e-8f77-7831e47145f4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="361" y="0" width="40" height="20" uuid="8df6a3e0-1ed8-42bb-bc77-060e4227d35d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="321" y="0" width="40" height="20" uuid="a5cd4cdb-1f70-4397-bf29-ba20fdd7441a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="221" y="0" width="100" height="20" uuid="6cc58a76-8bcb-4b40-80ee-ae78b86dcc9d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="157" y="0" width="64" height="20" uuid="91651f28-cbb9-4e30-8c3c-511b205542bb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="100" y="0" width="57" height="20" uuid="f2018185-5336-4bf6-b9be-b68169b84a22"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9da7142f-c8c4-43a9-8760-fd55b730c9b9"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5e76b3a3-4de3-4c25-96e8-94c1e97c3b0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="57" height="20" uuid="0f68815e-3bae-4aa8-96fb-9a452ac75103"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{no_tlp_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="0" width="64" height="20" uuid="f34abf13-b9d2-40ba-b149-fbbad6d89546"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="0" width="100" height="20" uuid="bde149cc-7ccb-4d55-a1c8-ce6ad7d06064"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alamat_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="0" width="40" height="20" uuid="088402d5-1ec0-4cee-8b84-ef4ab81ca627"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{absen_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="40" height="20" uuid="dbb1178f-e67f-417f-9a1f-aeec3066b84b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lembur_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="65" height="20" uuid="3f81490c-d85c-48d3-8464-3c38e01a41a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{bonus_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0">
+				<reportElement x="466" y="0" width="99" height="20" uuid="27a0f955-17b7-4408-ac8d-857a17f12714"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total_gaji_karyawan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
